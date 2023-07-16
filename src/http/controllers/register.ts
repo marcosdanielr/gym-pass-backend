@@ -27,7 +27,7 @@ export async function register(request: FastifyRequest, reply: FastifyReply) {
             password_hash: undefined
         });
     } catch (err) {
-        if(err instanceof UserAlreadyExistsError) {
+        if (err instanceof UserAlreadyExistsError) {
             return reply.status(Status.CONFLICT).send({message: err.message});
         }
 
