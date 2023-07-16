@@ -7,8 +7,8 @@ import { UserAlreadyExistsError } from './errors/user-already-exists-error';
 describe('Register Use Case', () => {
     it('should be able to register', async () => {
 
-        const userRepository = new InMemoryUsersRepository();
-        const registerUserCase = new RegisterUseCase(userRepository);
+        const usersRepository = new InMemoryUsersRepository();
+        const registerUserCase = new RegisterUseCase(usersRepository);
 
         const { user } = await registerUserCase.execute({
             name: 'Teste',
