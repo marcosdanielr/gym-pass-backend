@@ -22,11 +22,11 @@ GymPass style app.
 - [ ] The user must not be able check-in if not 100 meters near the gym;
 - [ ] The check-in must be validate within 20 minutes created;
 - [ ] The check-in must be validate by administrators only;
-- [ ] The gym must be to sign up by administrators only;
+- [ ] The gym must be to sign up by administrators only.
 
 ## NFR (non-functional requirement)
 
 - [x] The user password must be encrypted;
-- [ ] The application data must be persisted in a PostgreSQL database;
+- [x] The application data must be persisted in a PostgreSQL database;
 - [ ] All data list must be paginated with 20 items per page;
-- [ ] The user must be identificated by a JWT (JSON Web Token);
+- [ ] The user must be identificated by a JWT (JSON Web Token).
