@@ -10,7 +10,7 @@ describe('Register Use Case', () => {
         const userRepository = new InMemoryUsersRepository();
         const registerUserCase = new RegisterUseCase(userRepository);
 
-        const { user } =  await registerUserCase.execute({
+        const { user } = await registerUserCase.execute({
             name: 'Teste',
             email: 'teste2@teste.com',
             password: '12345678'
@@ -25,7 +25,7 @@ describe('Register Use Case', () => {
         const userRepository = new InMemoryUsersRepository();
         const registerUserCase = new RegisterUseCase(userRepository);
 
-        const { user } =  await registerUserCase.execute({
+        const { user } = await registerUserCase.execute({
             name: 'Teste',
             email: 'teste2@teste.com',
             password: '12345678'
@@ -38,7 +38,7 @@ describe('Register Use Case', () => {
 
         expect(isPasswordCorrectlyHashed).toBe(true);
     });
-  
+
     it('should not be able to register user with duplicate email', async () => {
 
         const userRepository = new InMemoryUsersRepository();
@@ -52,7 +52,7 @@ describe('Register Use Case', () => {
             password: '12345678'
         });
 
-        expect(() => 
+        await expect(() =>
             registerUserCase.execute({
                 name: 'Test2',
                 email,
