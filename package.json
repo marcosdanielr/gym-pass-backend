@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/marcosdanielr/gym-pass-backend#readme",
   "devDependencies": {
+    "@types/bcryptjs": "2.4.2",
     "@types/node": "20.4.2",
     "@typescript-eslint/eslint-plugin": "6.0.0",
     "@typescript-eslint/parser": "6.0.0",
@@ -32,6 +33,7 @@
   },
   "dependencies": {
     "@prisma/client": "5.0.0",
+    "bcryptjs": "2.4.3",
     "dotenv": "16.3.1",
     "fastify": "4.19.2",
     "zod": "3.21.4"
