@@ -35,6 +35,6 @@ export async function register(request: FastifyRequest, reply: FastifyReply) {
 
     return reply.status(Status.CREATED).send({
         ...response,
-        password_hash
+        password_hash: undefined
     });
 }
