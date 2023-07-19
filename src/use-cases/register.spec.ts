@@ -8,51 +8,51 @@ let usersRepository: InMemoryUsersRepository;
 let sut: RegisterUseCase;
 
 describe('Register Use Case', () => {
-  beforeEach(() => {
-    usersRepository = new InMemoryUsersRepository();
-    sut = new RegisterUseCase(usersRepository);
-  });
-
-  it('should be able to register', async () => {
-    const { user } = await sut.execute({
-      name: 'Teste',
-      email: 'teste2@teste.com',
-      password: '12345678'
+    beforeEach(() => {
+        usersRepository = new InMemoryUsersRepository();
+        sut = new RegisterUseCase(usersRepository);
     });
 
-    expect(user.id).toEqual(expect.any(String));
-  });
+    it('should be able to register', async () => {
+        const { user } = await sut.execute({
+            name: 'Teste',
+            email: 'teste2@teste.com',
+            password: '12345678'
+        });
 
-  it('should has user password open registration', async () => {
-    const { user } = await sut.execute({
-      name: 'Teste',
-      email: 'teste2@teste.com',
-      password: '12345678'
+        expect(user.id).toEqual(expect.any(String));
     });
 
-    const isPasswordCorrectlyHashed = await compare(
-      '12345678',
-      user.password_hash
-    );
+    it('should has user password open registration', async () => {
+        const { user } = await sut.execute({
+            name: 'Teste',
+            email: 'teste2@teste.com',
+            password: '12345678'
+        });
 
-    expect(isPasswordCorrectlyHashed).toBe(true);
-  });
+        const isPasswordCorrectlyHashed = await compare(
+            '12345678',
+            user.password_hash
+        );
 
-  it('should not be able to register user with duplicate email', async () => {
-    const email = 'test@email.com';
-
-    await sut.execute({
-      name: 'Test',
-      email,
-      password: '12345678'
+        expect(isPasswordCorrectlyHashed).toBe(true);
     });
 
-    await expect(() =>
-      sut.execute({
-        name: 'Test2',
-        email,
-        password: '123456789'
-      })
-    ).rejects.toBeInstanceOf(UserAlreadyExistsError);
-  });
+    it('should not be able to register user with duplicate email', async () => {
+        const email = 'test@email.com';
+
+        await sut.execute({
+            name: 'Test',
+            email,
+            password: '12345678'
+        });
+
+        await expect(() =>
+            sut.execute({
+                name: 'Test2',
+                email,
+                password: '123456789'
+            })
+        ).rejects.toBeInstanceOf(UserAlreadyExistsError);
+    });
 });

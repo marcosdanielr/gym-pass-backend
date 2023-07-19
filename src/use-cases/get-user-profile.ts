@@ -11,17 +11,17 @@ interface GetUserProfileUseCaseResponse {
 }
 
 export class GetUserProfileUseCase {
-  constructor(private userRepository: UsersRepository) { }
+    constructor(private userRepository: UsersRepository) { }
 
-  async execute({ userId }: GetUserProfileUseCaseRequest): Promise<GetUserProfileUseCaseResponse> {
-    const user = await this.userRepository.findById(userId);
+    async execute({ userId }: GetUserProfileUseCaseRequest): Promise<GetUserProfileUseCaseResponse> {
+        const user = await this.userRepository.findById(userId);
 
-    if (!user) {
-      throw new ResourceNotFoundError();
+        if (!user) {
+            throw new ResourceNotFoundError();
+        }
+
+        return {
+            user
+        };
     }
-
-    return {
-      user
-    };
-  }
 }
