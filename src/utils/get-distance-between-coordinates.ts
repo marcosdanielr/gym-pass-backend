@@ -28,5 +28,4 @@ export function getDistanceBetweenCordinates(from: Coordinate, to: Coordinate) {
     dist = dist * 1.609344;
 
     return dist;
-
 }
