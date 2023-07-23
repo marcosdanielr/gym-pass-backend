@@ -12,7 +12,7 @@ GymPass style app.
 - [x] Must be able search for gyms near the user (max 10km);
 - [x] Must be able the user search gyms by name;
 - [x] Must be able the user perform check-ins in a gym;
-- [ ] Must be able validate the check-in of an user;
+- [x] Must be able validate the check-in of an user;
 - [x] Must be able sign up a gym.
 
 ## BN (business rule)
