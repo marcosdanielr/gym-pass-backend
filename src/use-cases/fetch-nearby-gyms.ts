@@ -1,22 +1,22 @@
 import { GymsRepository } from '@/repositories/gyms-repository';
 import { Gym } from '@prisma/client';
 
-interface FeatchNearbyGymsUseCaseRequest {
+interface FetchNearbyGymsUseCaseRequest {
   userLatitude: number;
   userLongitude: number;
 }
 
-interface FeatchNearbyGymsUseCaseResponse {
+interface FetchNearbyGymsUseCaseResponse {
   gyms: Gym[];
 }
 
-export class FeatchNearbyGymsUseCase {
+export class FatchNearbyGymsUseCase {
     constructor(private gymsRepository: GymsRepository) {}
 
     async execute({
         userLatitude,
         userLongitude
-    }: FeatchNearbyGymsUseCaseRequest): Promise<FeatchNearbyGymsUseCaseResponse> {
+    }: FetchNearbyGymsUseCaseRequest): Promise<FetchNearbyGymsUseCaseResponse> {
 
         const gyms = await this.gymsRepository.findManyNearby({
             latitude: userLatitude,
