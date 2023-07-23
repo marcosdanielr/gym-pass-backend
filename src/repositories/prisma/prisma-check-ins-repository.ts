@@ -42,7 +42,15 @@ export class PrismaCheckInsRepository implements CheckInsRepository {
     }
 
     async findManyByUserId(userId: string, page: number) {
-        return [];
+        const checkIns = await prisma.checkIn.findMany({
+            where: {
+                user_id: userId
+            },
+            take: 20,
+            skip: (page - 1) * 20
+        });
+
+        return checkIns;
     }
 
     async findByUserIdOnDate(userId: string, date: Date) {
