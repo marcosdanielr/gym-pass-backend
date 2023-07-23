@@ -11,8 +11,15 @@ export class PrismaCheckInsRepository implements CheckInsRepository {
         return checkIn;
     }
 
-    save(checkIn: CheckIn) {
-        throw new Error();
+    async save(data: CheckIn) {
+        const checkIn = await prisma.checkIn.update({
+            where: {
+                id: data.id
+            },
+            data
+        });
+
+        return checkIn;
     }
 
     async findById(id: string){
