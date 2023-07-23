@@ -39,8 +39,7 @@ describe('Search Gyms Use Case', () => {
         ]);
     });
 
-
-    it.skip('should be able to fetch paginated gym search', async () => {
+    it('should be able to fetch paginated gym search', async () => {
         for (let i = 1; i <= 22; i++) {
             await gymsRepository.create({
                 title: `Academia do Amarelão ${i}`,
