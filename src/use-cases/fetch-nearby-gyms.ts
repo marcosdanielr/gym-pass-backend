@@ -10,7 +10,7 @@ interface FetchNearbyGymsUseCaseResponse {
   gyms: Gym[];
 }
 
-export class FatchNearbyGymsUseCase {
+export class FetchNearbyGymsUseCase {
     constructor(private gymsRepository: GymsRepository) {}
 
     async execute({
