@@ -4,7 +4,11 @@ import { CheckIn, Prisma } from '@prisma/client';
 
 export class PrismaCheckInsRepository implements CheckInsRepository {
     async create(data: Prisma.CheckInUncheckedCreateInput) {
-        throw new Error();
+        const checkIn = await prisma.checkIn.create({
+            data
+        });
+
+        return checkIn;
     }
 
     save(checkIn: CheckIn) {
