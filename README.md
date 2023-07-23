@@ -7,7 +7,7 @@ GymPass style app.
 - [x] Must be able to sign up;
 - [x] Must be able to authenticate;
 - [x] Must be able to get the profile of the logged in user;
-- [ ] Must be able to get the check-ins numbers by logged in user;
+- [x] Must be able to get the check-ins numbers by logged in user;
 - [x] Must be able the user get your history of check-ins;
 - [ ] Must be able search for gyms near the user;
 - [ ] Must be able the user search gyms by name;
