@@ -5,15 +5,15 @@ GymPass style app.
 ## FN (functional requirement)
 
 - [x] Must be able to sign up;
-- [ ] Must be able to authenticate;
-- [ ] Must be able to get the profile of the logged in user;
+- [x] Must be able to authenticate;
+- [x] Must be able to get the profile of the logged in user;
 - [ ] Must be able to get the check-ins numbers by logged in user;
 - [ ] Must be able the user get your history of check-ins;
 - [ ] Must be able search for gyms near the user;
 - [ ] Must be able the user search gyms by name;
-- [ ] Must be able the user perform check-ins in a gym;
+- [x] Must be able the user perform check-ins in a gym;
 - [ ] Must be able validate the check-in of an user;
-- [ ] Must be able sign up a gym.
+- [x] Must be able sign up a gym.
 
 ## BN (business rule)
 
