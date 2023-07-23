@@ -24,7 +24,7 @@ export async function authenticate(request: FastifyRequest, reply: FastifyReply)
                 sub: user.id
             }
         });
-    
+
         return reply.status(Status.OK).send({
             token
         });
