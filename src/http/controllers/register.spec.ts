@@ -3,7 +3,7 @@ import { app } from '@/app';
 import { it, describe, expect, beforeAll, afterAll } from 'vitest';
 import { Status } from '../status';
 
-describe('Registewr (e2e)', () => {
+describe('Register (e2e)', () => {
     beforeAll(async() => {
         await app.ready();
     });
