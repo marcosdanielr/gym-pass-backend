@@ -1,7 +1,7 @@
 import request from 'supertest';
 import { app } from '@/app';
 import { it, describe, expect, beforeAll, afterAll } from 'vitest';
-import { Status } from '../status';
+import { Status } from '../../status';
 
 describe('Register (e2e)', () => {
     beforeAll(async() => {

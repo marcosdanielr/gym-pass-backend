@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
 import { z } from 'zod';
-import { Status } from '../status';
+import { Status } from '../../status';
 import { UserAlreadyExistsError } from '@/use-cases/errors/user-already-exists-error';
 import { makeRegisterUseCase } from '@/use-cases/factories/make-register-use-case';
 
