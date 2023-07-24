@@ -1,4 +1,4 @@
-# App
+ App
 
 GymPass style app.
 
@@ -29,4 +29,4 @@ GymPass style app.
 - [x] The user password must be encrypted;
 - [x] The application data must be persisted in a PostgreSQL database;
 - [x] All data list must be paginated with 20 items per page;
-- [ ] The user must be identificated by a JWT (JSON Web Token).
+- [x] The user must be identificated by a JWT (JSON Web Token).
