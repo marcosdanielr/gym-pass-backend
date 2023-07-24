@@ -31,7 +31,7 @@ export async function authenticate(request: FastifyRequest, reply: FastifyReply)
 
     } catch (err) {
         if (err instanceof InvalidCredentialsError) {
-            return reply.status(Status.BAD_REQUEST).send({ message: err.message });
+            return reply.status(Status.UNAUTHORIZED).send({ message: err.message });
         }
 
         throw err;
