@@ -4,8 +4,6 @@ import { FastifyInstance } from 'fastify';
 import request from 'supertest';
 
 export async function createAndAuthenticateUser(app: FastifyInstance, role: 'ADMIN' | 'MEMBER' = 'MEMBER') {
-
-
     const createUserResponse = await prisma.user.create({
         data: {
             name: 'Testing',
